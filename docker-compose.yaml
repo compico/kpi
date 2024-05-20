@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:8
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: 222222
+      MYSQL_DATABASE: app
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 111111
+    volumes:
+      - db:/var/lib/mysql
+volumes:
+  db:
+    driver: local
