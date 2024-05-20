@@ -1,6 +1,6 @@
 ## Запуск
 ```shell
-  go mod download -
+  go mod download -x
   docker-compose up -d
 
   API_TOKEN="token" go run ./
